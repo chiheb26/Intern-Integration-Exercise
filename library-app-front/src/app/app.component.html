@@ -1,0 +1,3 @@
+<app-header (activeTabChanged)="onActiveTabChanged($event)"></app-header>
+<app-novel *ngIf="activeTab==='novels'"></app-novel>
+<app-magazine *ngIf="activeTab==='magazines'"></app-magazine>

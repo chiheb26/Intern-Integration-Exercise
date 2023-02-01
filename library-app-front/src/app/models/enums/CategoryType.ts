@@ -1,0 +1,3 @@
+export enum CategoryType{
+    HISTORCAL,CRIME,FASHION,FICTION,COOKING,DEFAULT
+}

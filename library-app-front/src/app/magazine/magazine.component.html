@@ -1,0 +1,37 @@
+<div class="card">
+    <h4 class="card-header">
+        Library : {{libName}} - List Of Magazines
+    </h4>
+    <div class="card-body">
+        <div class="table-responsive">
+
+            <table class="table table-bordered table-hover">
+            
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Number Of Pages</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Next Release Date</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor=" let magazine of magazines">
+                    <th scope="row">{{magazine.id}}</th>
+                    <td>{{magazine.title}}</td>
+                    <td>{{magazine.author.name}}</td>
+                    <td><span *ngFor="let cat of magazine.categories" >{{cat.categoryType}} </span></td>
+                    <td>{{magazine.numberOfPages}}</td>
+                    <td>{{magazine.price}}</td>
+                    <td>{{magazine.nextReleaseDate | date:'d-MM-y'}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            
+            </div>
+    </div>
+  </div>

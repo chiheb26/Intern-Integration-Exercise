@@ -1,0 +1,45 @@
+
+
+
+
+
+
+
+    
+<div class="card">
+    <h4 class="card-header">
+        Library : {{libName}} - List Of Novels
+    </h4>
+    <div class="card-body">
+        <div class="table-responsive">
+
+            <table class="table table-bordered table-hover">
+            
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Number Of Pages</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Story Summary</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor=" let novel of novels">
+                    <th scope="row">{{novel.id}}</th>
+                    <td>{{novel.title}}</td>
+                    <td>{{novel.author.name}}</td>
+                    <td><span *ngFor="let cat of novel.categories" >{{cat.categoryType}} </span></td>
+                    <td>{{novel.numberOfPages}}</td>
+                    <td>{{novel.price}}</td>
+                    <td>{{novel.storySummary}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            
+            </div>
+    </div>
+  </div>

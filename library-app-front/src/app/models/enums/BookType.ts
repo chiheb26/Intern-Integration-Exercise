@@ -1,0 +1,3 @@
+export enum BookType{
+    MAGAZINE="MAGAZINE",NOVEL="NOVEL",DEFAULT="DEFAULT"
+}
